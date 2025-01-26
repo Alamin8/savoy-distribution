@@ -1,0 +1,82 @@
+.sidebar {
+    background-color: #FFF;
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    padding-top: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 8;
+    box-shadow: 2px 0px 12px 0px rgba(0, 0, 0, 0.15);
+}
+
+.sortcut-links {
+    width: 100%;
+}
+
+.sortcut-links i {
+    font-size: 18px;
+    margin-right: 12px;
+    color: var(--blue);
+    display: none;
+}
+
+.sortcut-links p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--orange);
+    text-transform: uppercase;
+}
+
+.side-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 10px 5px;
+    padding: 10px 0px;
+    border-radius: 4px;
+}
+
+.side-links.cart {
+    padding-bottom: 10px;
+}
+
+.side-links.cart i {
+    color: var(--blue);
+}
+
+.side-links.cart p {
+    color: var(--orange);
+}
+
+.side-links .cart-link {
+    position: relative;
+}
+
+.side-links .cart-qty {
+    position: absolute;
+    top: -3px;
+    right: -33px;
+    background-color: var(--blue);
+    min-width: 21px;
+    font-size: 9px;
+    padding: 3px;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.side-links:hover {
+    background-color: var(--orange);
+    color: #FFF;
+}
+
+.side-links:hover p {
+    background-color: var(--orange);
+    color: var(--white)
+}
