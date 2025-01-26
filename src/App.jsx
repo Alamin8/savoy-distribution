@@ -18,6 +18,7 @@ const App = () => {
         <div className="container">
           <Routes>
             <Route path='' element={<Home/>} />
+            <Route path='savoy-distribution' element={<Home/>} />
             <Route path='/about' element={<About/>} />
             <Route path='/cart' element={<Cart/>} />
 
