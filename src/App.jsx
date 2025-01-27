@@ -6,6 +6,8 @@ import Sidebar from './Components/Sidebar/Sidebar'
 import About from './Pages/About/About'
 import Cart from './Pages/Cart/Cart'
 import Footer from './Components/Footer/Footer';
+import Login from './Pages/Login/Login';
+import Register from './Pages/Register/Register';
 
 const App = () => {
 
@@ -21,6 +23,8 @@ const App = () => {
             <Route path='savoy-distribution' element={<Home/>} />
             <Route path='/about' element={<About/>} />
             <Route path='/cart' element={<Cart/>} />
+            <Route path='/login' element={<Login/>} />
+            <Route path='/register' element={<Register/>} />
 
           </Routes>
           <Footer/>

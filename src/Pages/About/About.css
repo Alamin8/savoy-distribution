@@ -1,0 +1,29 @@
+.about{
+    width: 100%;
+}
+
+.about-hero-content{
+    background-image: url('../../assets/hero_BG.jpg');
+    height: 380px;
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.about-hero-content h1{
+    padding: 0px 100px;
+    font-size: 55px;
+    font-weight: 700;
+    color: white;
+}
+.about-hero-content span{
+    width: 70px;
+    height: 8px;
+    background-color: var(--orange);
+    display: inline-block;
+    margin: 30px 0px 50px 100px;
+}

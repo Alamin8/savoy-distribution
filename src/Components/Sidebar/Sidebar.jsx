@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Sidebar.css'
 import { Link } from 'react-router-dom';
+import { ShopContext } from '../../context/ShopContext';
 
 
 const Sidebar = () => {
+
+    const {getTotalCartAmount} = useContext(ShopContext);
+
+    console.log(getTotalCartAmount)
+
     return (
         <div className='sidebar'>
             <div className="sortcut-links">
@@ -31,7 +37,7 @@ const Sidebar = () => {
             </div>
             <div className="sortcut-links">
                 <Link to='/cart' className="side-links cart">
-                    <i className="fa-solid fa-basket-shopping"></i><p className='cart-link'>Cart <span className='cart-qty'>1000</span> </p>
+                    <i className="fa-solid fa-basket-shopping"></i><p className='cart-link'>Cart <span className='cart-qty'>{getTotalCartAmount()===0 ?"NO":"Yes"}</span> </p>
                 </Link>
             </div>
         </div>

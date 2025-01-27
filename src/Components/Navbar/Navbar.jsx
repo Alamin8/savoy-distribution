@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navbar.css'
+import { Link } from 'react-router-dom';
 // import savoy__logo from '../../assets/Savoy__logo__final.png'
 
 
@@ -14,8 +15,8 @@ const Navbar = () => {
 
             </div>
             <div className="nav-right flex-div">
-                <button className='becomecustomr'>Become A Customer</button>
-                <button className='signbutton'>Sign In</button>
+                <Link to='/register' className='becomecustomr'>Become A Customer</Link>
+                <Link to='/login' className='signbutton'>Sign In</Link>
             </div>
         </nav>
     );
