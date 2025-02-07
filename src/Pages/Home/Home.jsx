@@ -12,6 +12,7 @@ const Home = () => {
   const [category, setCategory] = useState("All");
   const { food_list } = useContext(ShopContext);
 
+
   return (
     <div className="">
       <Header />
@@ -43,7 +44,7 @@ const Home = () => {
         <div className="product-catelg-left">
           <h1 className="product-catelg-title">Product Catalog</h1>
           <span className="calelg-bar"></span>
-          <Link className="viewallproductbtn" to="/">
+          <Link className="viewallproductbtn" to="/products">
             View All Products
           </Link>
         </div>
@@ -86,8 +87,7 @@ const Home = () => {
         <h2>Top Categories Food</h2>
         <div className="food-display-list">
           {food_list.map((item, index) => {
-            console.log(category);
-            if (category === "All" || category === item.category) {
+            if (category === "All" || category === item.brand) {
               return (
                 <>
                   <FoodItem key={index} item={item} />

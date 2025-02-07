@@ -1,14 +1,23 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import './Sidebar.css'
 import { Link } from 'react-router-dom';
 import { ShopContext } from '../../context/ShopContext';
-
+import { useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
 
-    const {getTotalCartAmount} = useContext(ShopContext);
+    const {getTotalCartAmount, getTotalCartItemQty, token} = useContext(ShopContext);
+    const navigate = useNavigate()
+    
+    const handleCartnavigation=()=>{
+        if(!token){
+            alert("Need to login first");
+        }
+        else{
+            navigate('/cart');
+        }
+    }
 
-    console.log(getTotalCartAmount)
 
     return (
         <div className='sidebar'>
@@ -36,9 +45,9 @@ const Sidebar = () => {
                 </Link>
             </div>
             <div className="sortcut-links">
-                <Link to='/cart' className="side-links cart">
-                    <i className="fa-solid fa-basket-shopping"></i><p className='cart-link'>Cart <span className='cart-qty'>{getTotalCartAmount()===0 ?"NO":"Yes"}</span> </p>
-                </Link>
+                <p onClick={handleCartnavigation} className="side-links cart">
+                    <i className="fa-solid fa-basket-shopping"></i><p className='cart-link'>Cart {getTotalCartAmount()===0 ? '': <span className='cart-qty'>{getTotalCartItemQty()}</span>}</p>
+                </p>
             </div>
         </div>
     );
